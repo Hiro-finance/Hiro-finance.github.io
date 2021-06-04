@@ -1,0 +1,12 @@
+buttons
+-about
+-discord
+-brawl now
+-subscribe
+-donate
+-bracket
+-website
+-casters
+-merch
+-rules
+-schedule

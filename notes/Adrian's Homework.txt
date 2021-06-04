@@ -1,0 +1,31 @@
+Adrian's homework for the week:
+
+-upload About image and write something under twitch panel
+Possible text:
+Welcome to the Tavern, a place to make friends, rivals, and even brawl amongst each other, just to name a few things...
+
+-upload Subscribe image
+link to https://www.twitch.tv/subs/BrawlersTavern 
+and use this description: 
+Subscribing is free to one streamer, per month, if you link your Twitch to your Amazon Prime! More details here: https://www.amazongames.com/en-us/support/prime-gaming/articles/link-your-amazon-and-twitch-accounts
+
+-upload Donate image and link to streamlabs donate link once you link your paypal on streamlabs.
+recommended description:
+Click the image to donate to Brawlers Tavern.
+Donating is appreciated but not necessary. 
+Your follows, views, and chat engagement are just as appreciated!
+
+-update Discord panel
+recommended text:
+Click the image to join the discord to stay up to date with everything in the Tavern!
+
+-update Bracket panel
+add description, possibly this:
+Click the image to view current and previous brackets for brawls.
+
+-update Brawl Now panel
+possible description:
+Click Brawl Now to pay a visit to the Tavern! (Alpha Release)
+
+-set a time for a consultation with me for an hour or so, if time allows.
+this will allow us to review and set up stream commands, timers, mini games and loyalty.
