@@ -102,6 +102,7 @@ p {
 	text-shadow: 1px 1px #111;
 }
 
+
 strong {
 	font-weight: bold;
 }
@@ -146,7 +147,7 @@ strong {
   }
   .hero p{
 	font-size: 1.5rem;
-	font-weight: 300;
+	font-weight: 600;
 	margin: auto;
 	position: absolute; 
 	top: 450px;
@@ -181,6 +182,54 @@ strong {
 	-moz-animation: scale-in 1.3s  ease-out;
 	  animation: scale-in 1.3s ease-out; 
   }
+
+  .cta2 {
+	margin: 0 auto;
+	z-index: 555;
+	display: block;
+	position: absolute;
+	top: 70%;
+	right: 45%;
+	background-color: #BE9FDD;
+	border: 1px solid #FFD700;
+	text-align: center;
+	text-decoration: none;
+	width: 200px;
+	height: 65px;
+	border-radius: 6px;
+	transform: scale(1);
+	transition: all .5s ease-in-out;
+	box-shadow: 0 7px 7px rgba(0, 0, 0, 0.25);
+	overflow-y: hidden;
+}
+
+.cta2:hover {
+	transform: scale(1.01);
+	transition: all .3s ease-in-out;
+	box-shadow: 0 7px 7px rgba(0, 0, 0, 0.5);
+	background-color: #261339;
+	border: 1.5px solid #FFD700;
+
+}
+
+.cta2 a {
+	color: #261339;
+	font-family: 'Righteous', sans-serif;
+	font-size: 1.35rem;
+	text-align: center;
+	text-decoration: none;
+	display: block;
+	width: 100%;
+	height: 50px;
+	margin: 0 auto;
+	padding-top: 23px;
+	overflow-y: hidden;
+}
+
+.cta2 a:hover {
+	color: #BE9FDD;
+}
+
   
 /*BUTTON*/
 
@@ -350,7 +399,7 @@ nav ul li a:hover {
 
 .bgarea {
 	background-color: #261339;
-	width: 85%;
+	width: 65%;
 	height: auto;
 	display: block;
 	margin: 0 auto;
@@ -502,6 +551,7 @@ a {
 	float: left;
 	width: 50%;
 	margin: 0  auto;
+	overflow-y: hidden;
 }
 
 .info p {
@@ -516,10 +566,15 @@ a {
 	overflow-y: hidden;
 }
 
+.info2 {
+	overflow-y: hidden;
+}
+
 .info2 img {
 	float: right;
 	width: 50%;
 	margin: 0 auto;
+	overflow-y: hidden;
 }
 
 .info2 p {
@@ -533,6 +588,13 @@ a {
 	padding-top: 20%;
 	overflow-y: hidden;
 }
+
+svg {
+	margin: 10% auto 0 auto;
+	display: block;
+	max-width: 100%;
+}
+
 
 /* SOCIAL */
 
@@ -711,6 +773,12 @@ a:active {
 
 /* RESPONSIVE QUERIES */
 
+@media only screen and (max-width: 1500px) {
+	.bgarea {
+		min-width: 90%;
+	}
+}
+
 @media only screen and (max-width: 1100px) {
 	nav {
 		top: 0px;
@@ -755,6 +823,9 @@ a:active {
 	.hero p {
 		width: 85%;
 	}
+	.bgarea {
+		min-width: 90%;
+	}
 	.about img {
 		width: 50%;
 		margin: 0 auto;
@@ -763,15 +834,50 @@ a:active {
 		width: 45%;
 		margin: 0 auto;
 	}
+	.info img {
+		width: 50%;
+		margin: 0 auto;
+	}
+	.info p {
+		width: 45%;
+		margin: 0 auto;
+	}
+	.info2 img {
+		width: 50%;
+		margin: 0 auto;
+	}
+	.info2 p {
+		width: 45%;
+		margin: 0 auto;
+	}
 }
 
 
 @media only screen and (max-width: 1024px) {
+	.bgarea {
+		width: 90%;
+	}
 	.about p {
 		width: 55%;
 		margin: 0 auto;
 	}
 	.about img {
+		width: 45%;
+		margin: 2% auto;
+	}
+	.info p {
+		width: 55%;
+		margin: 0 auto;
+	}
+	.info img {
+		width: 45%;
+		margin: 2% auto;
+	}
+	.info2 p {
+		width: 55%;
+		margin: 0 auto;
+	}
+	.info2 img {
 		width: 45%;
 		margin: 2% auto;
 	}
@@ -785,12 +891,35 @@ a:active {
 		font-size: 3rem;
 
 	}
-	.about img {
+	.bgarea {
 		width: 90%;
+	}
+	.about img {
+		width: 100%;
 		margin-right: 20px;
 		margin-bottom: 5%;
 	}
 	.about p {
+		width: 100%;
+		margin: 0 auto;
+		text-align: center;
+	}
+	.info img {
+		width: 100%;
+		margin-right: 20px;
+		margin-bottom: 5%;
+	}
+	.info p {
+		width: 100%;
+		margin: 0 auto;
+		text-align: center;
+	}
+	.info2 img {
+		width: 100%;
+		margin-right: 20px;
+		margin-bottom: 5%;
+	}
+	.info2 p {
 		width: 90%;
 		margin: 0 auto;
 		text-align: center;
@@ -806,7 +935,7 @@ a:active {
 		margin: 50px auto;
 	}
 	.main-container {
-		width: 95%;
+		width: 90%;
 	}
 	.heading-container, .flex-container, .card-container {
 		width: 100%;
@@ -829,11 +958,30 @@ a:active {
 	.cta {
 		top: 8.25%;
 	}
+	.bgarea {
+		width: 90%;
+	}
 	.about img {
-		width: 95%;
+		width: 90%;
 	}
 	.about p {
-		width: 95%;
+		width: 90%;
+		margin: 0 auto;
+		text-align: center;
+	}
+	.info img {
+		width: 100%;
+	}
+	.info p {
+		width: 100%;
+		margin: 0 auto;
+		text-align: center;
+	}
+	.info2 img {
+		width: 100%;
+	}
+	.info2 p {
+		width: 100%;
 		margin: 0 auto;
 		text-align: center;
 	}
@@ -851,6 +999,9 @@ a:active {
 		float: none;
 		line-height: 26px;
 	}
+	.bgarea {
+		width: 90%;
+	}
 	.bgarea img {
 		float: none;
 		max-width: 350px;
@@ -860,7 +1011,9 @@ a:active {
 		float: none;
 		padding: 0;
 		line-height: 26px;
-		min-width: 95%;
+		min-width: 90%;
+		text-align: center;
+		padding-top: 5%;
 	}
 	.vcenter {
 		display: block;
@@ -873,11 +1026,33 @@ a:active {
 	.about, #feat, #soc {
 		margin-top: 100px;
 	}
-	.about p {
-		text-align: center;
-		padding-top: 5%;
-	}
 	.about img {
+		min-width: 85%;
+	}
+	.info {
+		float: none;
+		line-height: 26px;
+	}
+	.info p {
+		float: none;
+		padding: 0;
+		line-height: 26px;
+		min-width: 90%;
+	}
+	.info img {
+		min-width: 85%;
+	}
+	.info2 {
+		float: none;
+		line-height: 26px;
+	}
+	.info2 p {
+		float: none;
+		padding: 0;
+		line-height: 26px;
+		min-width: 90%;
+	}
+	.info2 img {
 		min-width: 85%;
 	}
 	#header-container {
@@ -898,6 +1073,9 @@ a:active {
 }
 
 @media only screen and (max-width:640px) {
+	.bgarea {
+		width: 90%;
+	}
 	nav {
 		float: right;
 		padding: 0;
@@ -909,10 +1087,30 @@ a:active {
 	.about p {
 		margin: 2.5% auto;
 		padding: 0;
-		width: 95%;
+		width: 90%;
 		font-size: 1rem;
 	}
 	.about {
+		margin: 2.5% auto;
+		padding: 0;
+	}
+	.info p {
+		margin: 2.5% auto;
+		padding: 0;
+		width: 90%;
+		font-size: 1rem;
+	}
+	.info {
+		margin: 2.5% auto;
+		padding: 0;
+	}
+	.info2 p {
+		margin: 2.5% auto;
+		padding: 0;
+		width: 90%;
+		font-size: 1rem;
+	}
+	.info2 {
 		margin: 2.5% auto;
 		padding: 0;
 	}
@@ -984,6 +1182,9 @@ h1 {
 }
 
 @media only screen and (max-width: 480px) {
+	.bgarea {
+		width: 90%;
+	}
 	nav {
 		width: 100%;
 	}
@@ -1005,9 +1206,13 @@ h1 {
 	}
 }
 @media only screen and (max-width: 360px) {
+.bgarea {
+	width: 90%;
+}
+
 	.about img {
 		float: none;
-		width: 95%;
+		width: 90%;
 		margin: 0 auto;
 		padding: 0;
 		overflow-x: hidden;
@@ -1019,7 +1224,25 @@ h1 {
 	.about p {
 		margin: 0 auto;
 		padding: 0;
-		width: 95%;
+		width: 90%;
+	}
+	.info {
+		margin: 0 auto;
+		padding: 0;
+	}
+	.info p {
+		margin: 0 auto;
+		padding: 0;
+		width: 90%;
+	}
+	.info2 {
+		margin: 0 auto;
+		padding: 0;
+	}
+	.info2 p {
+		margin: 0 auto;
+		padding: 0;
+		width: 90%;
 	}
 	.vcenter {
 		margin: 0 auto;
