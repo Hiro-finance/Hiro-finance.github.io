@@ -4,6 +4,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+
 * {
 	margin: 0;
 	padding: 0;
@@ -102,10 +103,10 @@ p {
 	text-shadow: 1px 1px #111;
 }
 
-
 strong {
 	font-weight: bold;
 }
+
 /* HERO */
 
 .hero {
@@ -133,10 +134,11 @@ strong {
 	overflow: hidden;
 }
 
-.hero h1{
-	font-size: 3.75em;
+.hero h1 {
+	line-height: 34px;
+	font-size: 3.75rem;
 	margin: 0 auto;
-	position: absolute; 
+	position: absolute;
 	top: 350px;
 	left: 0;
 	right: 0;
@@ -144,21 +146,23 @@ strong {
 	z-index: 1;
 	height: 120px;
 	padding-top: 22px;
-  }
-  .hero p{
-	font-size: 1.5rem;
-	font-weight: 600;
+}
+
+.hero p {
+	line-height: 34px;
+	font-size: 1.35rem;
+	font-weight: 300;
 	margin: auto;
-	position: absolute; 
+	position: absolute;
 	top: 450px;
 	left: 0;
 	right: 0;
 	bottom: 0;
 	z-index: 1;
 	width: 50%;
-  }
+}
 
-  .bar{
+.bar {
 	width: 100%;
 	height: 250px;
 	background: -moz-linear-gradient(289deg, #000000 0%, #000000 50%, #000000 100%);
@@ -166,25 +170,25 @@ strong {
 	background: -ms-linear-gradient(289deg, #000000 0%, #000000 50%, #000000 100%);
 	background: linear-gradient(161deg, #000000 0%, #000000 50%, #000000 100%);
 	opacity: 0.45;
-	position: absolute; 
+	position: absolute;
 	z-index: 0;
 	left: 0;
 	top: 325px;
 	-ms-transform-origin: 100% 0%;
 	-webkit-transform-origin: 100% 0%;
 	transform-origin: 100% 0%;
-	 -webkit-animation: roll-out 1.2s ease-out ;
-	-moz-animation: roll-out 1.2s ease-out ;
-	  animation: roll-out 1.2s ease-out ; 
-  }
-  .hero h1, .hero p{
+	-webkit-animation: roll-out 1.2s ease-out;
+	-moz-animation: roll-out 1.2s ease-out;
+	animation: roll-out 1.2s ease-out;
+}
+
+.hero h1, .hero p {
 	-webkit-animation: scale-in 1.3s ease-out;
-	-moz-animation: scale-in 1.3s  ease-out;
-	  animation: scale-in 1.3s ease-out; 
-  }
+	-moz-animation: scale-in 1.3s ease-out;
+	animation: scale-in 1.3s ease-out;
+}
 
-
-  .cta2 {
+.cta2 {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -212,7 +216,6 @@ strong {
 	box-shadow: 0 7px 7px rgba(0, 0, 0, 0.5);
 	background-color: #261339;
 	border: 1.5px solid #FFD700;
-
 }
 
 .cta2 a {
@@ -233,7 +236,6 @@ strong {
 	color: #BE9FDD;
 }
 
-  
 /*BUTTON*/
 
 .cta {
@@ -262,7 +264,6 @@ strong {
 	box-shadow: 0 7px 7px rgba(0, 0, 0, 0.5);
 	background-color: #261339;
 	border: 1.5px solid #FFD700;
-
 }
 
 .cta a {
@@ -375,6 +376,7 @@ nav ul li a {
 	font-weight: lighter;
 	font-size: 1.25rem;
 	letter-spacing: 1.75px;
+	overflow: hidden;
 }
 
 nav ul li a:hover {
@@ -401,8 +403,8 @@ nav ul li a:hover {
 	transition: .4s all ease-in-out;
 	color: #FFD700;
 }
-/* .menu-icon:hover {} */
 
+/* .menu-icon:hover {} */
 
 /* ABOUT */
 
@@ -416,18 +418,18 @@ nav ul li a:hover {
 	box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.5);
 }
 
-a {	
+a {
 	color: #BE9FDD;
 	text-decoration: none;
 	letter-spacing: 1.5px;
 }
 
 #info a:hover {
-	color:#fad149
+	color: #fad149
 }
 
 .about {
-	margin: 10% auto;
+	margin: 15% auto;
 	padding: 0;
 	width: 100%;
 	overflow-y: hidden;
@@ -508,19 +510,20 @@ a {
 	font-size: 3rem;
 	display: block;
 	position: relative;
-	color:#FFD700;
+	color: #FFD700;
 	margin: 0 auto;
 	text-align: center;
 	padding-bottom: 25%;
 	padding-top: 15%;
 }
+
 .card__heading {
 	font-family: 'Righteous', sans-serif;
 	font-size: 1.75rem;
 	text-align: center;
 	color: #e6cdff;
 	margin: 0 auto;
-	overflow: hidden;	
+	overflow: hidden;
 }
 
 .card__description {
@@ -529,7 +532,7 @@ a {
 	font-weight: 300;
 	text-align: center;
 	line-height: 22px;
-	letter-spacing: 1.75px; 
+	letter-spacing: 1.75px;
 	margin: 0 auto;
 	padding-top: 15%;
 	overflow: hidden;
@@ -559,7 +562,7 @@ a {
 .info img {
 	float: left;
 	width: 50%;
-	margin: 0  auto;
+	margin: 0 auto;
 	overflow-y: hidden;
 }
 
@@ -603,7 +606,6 @@ svg {
 	display: block;
 	max-width: 100%;
 }
-
 
 /* SOCIAL */
 
@@ -701,7 +703,7 @@ footer {
 }
 
 a:active {
-    color: #BE9FDD;
+	color: #BE9FDD;
 	text-decoration: none;
 }
 
@@ -745,7 +747,7 @@ a:active {
 	width: 70%;
 }
 
-.ftrbg img:hover {	
+.ftrbg img:hover {
 	transition: .4s all ease-in-out;
 	-webkit-filter: brightness(120%);
 }
@@ -753,7 +755,7 @@ a:active {
 /* ADJUST */
 
 #abt {
-	padding-top: 240px;
+	padding-top: 260px;
 	overflow: hidden;
 }
 
@@ -846,7 +848,6 @@ a:active {
 		padding-right: 25px;
 		padding-top: 20px;
 	}
-	
 	.menu {
 		overflow: hidden;
 	}
@@ -887,7 +888,6 @@ a:active {
 		display: block;
 	}
 }
-
 
 @media only screen and (max-width: 1024px) {
 	.bgarea {
@@ -934,7 +934,6 @@ a:active {
 @media only screen and (max-width: 850px) {
 	h1 {
 		font-size: 3rem;
-
 	}
 	.bgarea {
 		width: 90%;
@@ -975,7 +974,6 @@ a:active {
 	.cta2 {
 		margin-top: 80%;
 	}
-	
 }
 
 @media only screen and (max-width: 800px) {
@@ -1001,7 +999,6 @@ a:active {
 		width: 90%;
 		overflow: hidden;
 		font-size: 1.25rem;
-
 	}
 	.cta {
 		top: 8.25%;
@@ -1185,60 +1182,59 @@ a:active {
 		margin-left: -20px;
 		padding-top: 14px;
 		text-align: left;
-	}	
-h1 {
-	margin: 0 auto;
-	padding: 95px 0;
-	line-height: 50px;
-	font-size: 3.5rem;
-}
-
-#feat, #soc {
-	padding-top: 150px;
-	padding-bottom: 55px;
-}
-.arrow {
-	display: none;
-}
-.copy {
-	margin-top: 100px;
-}
-.hero {
-	background-size: contain;
-}
-#header-container {
-	position: relative;
-	top: 0;
-	bottom: 0;
-	min-width: 100%;
-	height: 420px;
-	overflow: hidden;
-}
-.hero p {
-	width: 90%;
-	overflow: hidden;
-	height: 100%;
-	font-size: 1rem;
-	top: 385px;
-	line-height: 20px;
-}
-.hero h1 {
-	width: 80%;
-	overflow: hidden;
-	height: 100%;
-	top: 120px;
-	font-size: 2.25rem;
-}
-#header-container {
-	overflow-y: hidden;
-}
-.bar {
-	top: 130px;
-	height: 140px;
-}
-.cta2 {
-	margin-top: 50%;
-}
+	}
+	h1 {
+		margin: 0 auto;
+		padding: 95px 0;
+		line-height: 50px;
+		font-size: 3.5rem;
+	}
+	#feat, #soc {
+		padding-top: 150px;
+		padding-bottom: 55px;
+	}
+	.arrow {
+		display: none;
+	}
+	.copy {
+		margin-top: 100px;
+	}
+	.hero {
+		background-size: contain;
+	}
+	#header-container {
+		position: relative;
+		top: 0;
+		bottom: 0;
+		min-width: 100%;
+		height: 420px;
+		overflow: hidden;
+	}
+	.hero p {
+		width: 90%;
+		overflow: hidden;
+		height: 100%;
+		font-size: 1rem;
+		top: 385px;
+		line-height: 20px;
+	}
+	.hero h1 {
+		width: 80%;
+		overflow: hidden;
+		height: 100%;
+		top: 120px;
+		font-size: 2.25rem;
+	}
+	#header-container {
+		overflow-y: hidden;
+	}
+	.bar {
+		top: 130px;
+		height: 140px;
+	}
+	.cta2 {
+		margin-top: 50%;
+	}
 }
 
 @media only screen and (max-width: 480px) {
@@ -1252,24 +1248,31 @@ h1 {
 		line-height: 50px;
 	}
 	.hero p {
-		width: 90%;
+		width: 95%;
 		overflow: hidden;
 		height: 100%;
-		font-size: 1.25rem;
+		font-size: .8rem;
 	}
 	.hero h1 {
 		width: 80%;
 		overflow: hidden;
 		height: 100%;
-		top: 110px;
-		font-size: 2.75rem;
+		top: 120px;
+		font-size: 1.75rem;
+		line-height: 24px;
+	}
+	.bar {
+		height: 50px;
+	}
+	.cta2 {
+		top: 25%;
 	}
 }
-@media only screen and (max-width: 360px) {
-.bgarea {
-	width: 90%;
-}
 
+@media only screen and (max-width: 360px) {
+	.bgarea {
+		width: 90%;
+	}
 	.about img {
 		float: none;
 		width: 90%;
@@ -1315,13 +1318,19 @@ h1 {
 		width: 90%;
 		overflow: hidden;
 		height: 100%;
-		font-size: 1.25rem;
+		font-size: .8rem;
 	}
 	.hero h1 {
 		width: 80%;
 		overflow: hidden;
 		height: 100%;
-		top: 110px;
-		font-size: 2.75rem;
+		top: 120px;
+		font-size: 1.25rem;
+	}
+	.bar {
+		height: 50px;
+	}
+	.cta2 {
+		top: 40%;
 	}
 }
