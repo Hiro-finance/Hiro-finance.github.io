@@ -183,13 +183,17 @@ strong {
 	  animation: scale-in 1.3s ease-out; 
   }
 
+
   .cta2 {
-	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	position: inherit;
+	margin: auto auto;
+	margin-top: 35%;
 	z-index: 555;
-	display: block;
-	position: absolute;
-	top: 70%;
-	right: 45%;
 	background-color: #BE9FDD;
 	border: 1px solid #FFD700;
 	text-align: center;
@@ -197,7 +201,6 @@ strong {
 	width: 200px;
 	height: 65px;
 	border-radius: 6px;
-	transform: scale(1);
 	transition: all .5s ease-in-out;
 	box-shadow: 0 7px 7px rgba(0, 0, 0, 0.25);
 	overflow-y: hidden;
@@ -289,7 +292,7 @@ strong {
 	display: block;
 	position: absolute;
 	top: 36.5%;
-	right: 8.5%;
+	right: 10%;
 	text-align: center;
 	text-decoration: none;
 	width: 111px;
@@ -302,6 +305,10 @@ strong {
 
 .litepaper a:hover {
 	color: #FFD700;
+}
+
+.LP {
+	display: none;
 }
 
 /* NAV */
@@ -327,6 +334,7 @@ nav {
 	width: 100%;
 	z-index: 998;
 	overflow: hidden;
+	margin: 0 auto;
 }
 
 nav ul {
@@ -335,8 +343,9 @@ nav ul {
 	overflow: hidden;
 	color: #ccc;
 	padding: 0;
+	padding-left: 3%;
 	text-align: center;
-	margin: 0;
+	margin: 0 auto;
 	transition: 1s;
 	overflow: hidden;
 }
@@ -777,9 +786,30 @@ a:active {
 	.bgarea {
 		min-width: 90%;
 	}
+	.cta2 {
+		margin-top: 45%;
+	}
+	.litepaper {
+		margin-right: 3.5%;
+	}
+}
+
+@media only screen and (max-width: 1200px) {
+	.bgarea {
+		min-width: 90%;
+	}
+	.cta2 {
+		margin-top: 55%;
+	}
+	.litepaper {
+		margin-right: 5%;
+	}
 }
 
 @media only screen and (max-width: 1100px) {
+	.cta2 {
+		margin-top: 65%;
+	}
 	nav {
 		top: 0px;
 		overflow: hidden;
@@ -850,6 +880,12 @@ a:active {
 		width: 45%;
 		margin: 0 auto;
 	}
+	.litepaper {
+		display: none;
+	}
+	.lp {
+		display: block;
+	}
 }
 
 
@@ -883,6 +919,15 @@ a:active {
 	}
 	.cta {
 		top: 5%;
+	}
+	.cta2 {
+		margin-top: 60%;
+	}
+	.litepaper {
+		display: none;
+	}
+	.LP {
+		display: block;
 	}
 }
 
@@ -926,6 +971,9 @@ a:active {
 	}
 	.hero p {
 		width: 90%;
+	}
+	.cta2 {
+		margin-top: 80%;
 	}
 	
 }
@@ -985,9 +1033,15 @@ a:active {
 		margin: 0 auto;
 		text-align: center;
 	}
+	.cta2 {
+		margin-top: 80%;
+	}
 }
 
 @media only screen and (max-width: 768px) {
+	.cta2 {
+		margin-top: 80%;
+	}
 	h1 {
 		width: 100%;
 		margin: 0 auto;
@@ -1069,6 +1123,9 @@ a:active {
 	.cta {
 		right: 6.5%;
 		top: 10.5%;
+	}
+	.cta2 {
+		margin-top: 80%;
 	}
 }
 
@@ -1178,6 +1235,9 @@ h1 {
 .bar {
 	top: 130px;
 	height: 140px;
+}
+.cta2 {
+	margin-top: 50%;
 }
 }
 
