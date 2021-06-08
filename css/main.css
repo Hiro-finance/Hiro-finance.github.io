@@ -41,7 +41,6 @@ body {
 	background-size: cover;
 	background-position: center;
 	overflow-x: hidden;
-	position: relative;
 }
 
 ul {
@@ -602,9 +601,9 @@ a {
 }
 
 svg {
-	margin: 10% auto 0 auto;
+	margin: 5% auto 0 auto;
 	display: block;
-	max-width: 100%;
+	max-width: 95%;
 }
 
 /* SOCIAL */
@@ -788,6 +787,12 @@ a:active {
 
 /* RESPONSIVE QUERIES */
 
+@media only screen and (max-width: 1690px) {
+	.cta2 {
+		margin-top: 40%;
+	}
+}
+
 @media only screen and (max-width: 1500px) {
 	.bgarea {
 		min-width: 90%;
@@ -797,6 +802,15 @@ a:active {
 	}
 	.litepaper {
 		margin-right: 3.5%;
+	}
+}
+
+@media only screen and (max-width: 1380px) {
+	.hero p {
+		width: 80%;
+	}
+	.cta2 {
+		margin-top: 50%;
 	}
 }
 
@@ -827,7 +841,7 @@ a:active {
 		margin: 3.5% auto;
 	}
 	.cta {
-		margin-top: 2.25%;
+		margin-top: 1.5%;
 		margin-right: 9%;
 	}
 	nav ul {
@@ -935,7 +949,16 @@ a:active {
 	}
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 1000px) {
+	.cta {
+		margin-top: 2%;
+	}
+	.cta2 {
+		margin-top: 70%;
+	}
+}
+
+@media only screen and (max-width: 860px) {
 	h1 {
 		font-size: 3rem;
 	}
@@ -944,7 +967,6 @@ a:active {
 	}
 	.about img {
 		width: 100%;
-		margin-right: 20px;
 		margin-bottom: 5%;
 	}
 	.about p {
@@ -1240,7 +1262,11 @@ a:active {
 		margin-top: 50%;
 	}
 }
-
+@media only screen and (max-width: 550px) {
+	.cta2 {
+		margin-top: 60%;
+	}
+}
 @media only screen and (max-width: 480px) {
 	.bgarea {
 		width: 90%;
@@ -1269,7 +1295,7 @@ a:active {
 		height: 50px;
 	}
 	.cta2 {
-		top: 25%;
+		top: 15%;
 	}
 }
 
