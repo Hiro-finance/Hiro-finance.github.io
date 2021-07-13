@@ -34,12 +34,12 @@ body {
 	line-height: 1;
 	width: 100%;
 	height: 100%;
-	background-image: url(../img/bg.jpg);
-	background-color: #070707;
+	background-color:  rgb(14, 3, 19);
+	background-image: url('../img/bg.png');
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: center;
+	background-position: bottom left;
 	overflow-x: hidden;
 }
 
@@ -86,11 +86,17 @@ h1 {
 	font-weight: 600;
 	font-size: 3.75rem;
 	color: #BE9FDD;
-	text-shadow: 1px 1px #111;
+	text-shadow: 1px 1px #261339;
 	text-align: center;
 	letter-spacing: 3px;
 	line-height: 34px;
 }
+@supports (-webkit-text-stroke: 1px #BE9FDD) {
+	h1 {
+	  -webkit-text-stroke: 1px #BE9FDD;
+	  -webkit-text-fill-color: #261339;
+	}
+  }
 
 p {
 	font-family: 'Montserrat', sans-serif;
@@ -106,19 +112,38 @@ strong {
 	font-weight: bold;
 }
 
+::-webkit-scrollbar{
+	width: 10px;
+	height: 10px;
+	}
+	::-webkit-scrollbar-thumb{
+	background: linear-gradient(61deg, #261339 14%,#BE9FDD 64%);
+	border: 0.2px outset #FFD700;
+	border-radius: 10px;
+	}
+	::-webkit-scrollbar-thumb:hover{
+	background: linear-gradient(13deg, #BE9FDD 14%,#BE9FDD 64%);
+	transition: all .3s ease-in-out;
+	}
+	::-webkit-scrollbar-track{
+	background: #261339;
+	border: 0.1px outset #FFD700;
+	border-radius: 0px;
+	box-shadow: inset 7px 10px 12px 0px #261339;
+	}
+
 /* HERO */
+
+#dots {
+	width: 100%;
+	height: 100vh;
+	z-index:1;
+}
 
 .hero {
 	display: block;
 	width: 100%;
 	height: 100%;
-	background-image: url('../img/banner.png');
-	background-repeat: no-repeat;
-	background-position: center center;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
 	position: relative;
 	text-align: center;
 	overflow-y: hidden;
@@ -131,20 +156,24 @@ strong {
 	width: 100vw;
 	height: 100vh;
 	overflow: hidden;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 }
 
 .hero h1 {
 	line-height: 34px;
-	font-size: 3.75rem;
+	font-size: 4rem;
 	margin: 0 auto;
 	position: absolute;
-	top: 350px;
+	top: 35%;
 	left: 0;
 	right: 0;
 	bottom: 0;
 	z-index: 1;
 	height: 120px;
 	padding-top: 22px;
+	color: #261339;
+transition: 0s linear;
 }
 
 .hero p {
@@ -153,38 +182,33 @@ strong {
 	font-weight: 300;
 	margin: auto;
 	position: absolute;
-	top: 450px;
+	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
 	z-index: 1;
-	width: 50%;
+	width: 35%;
+	height: 90px;
+	padding-top: 5px;
+	border-radius: 6px;
+	text-shadow:
+	3px  3px 2px #261339,
+   -1px -1px 2px #261339,  
+	1px -1px 2px #261339,
+   -1px  1px 2px #261339,
+	1px  1px 2px #261339;
+	overflow: hidden;
 }
+@supports (-webkit-text-stroke: 1px black) {
+	.hero p {
+	  -webkit-text-stroke: 0px #fefefe;
+	  -webkit-text-fill-color: #fefefe;
+	}
+  }
 
-.bar {
-	width: 100%;
-	height: 250px;
-	background: -moz-linear-gradient(289deg, #000000 0%, #000000 50%, #000000 100%);
-	background: -webkit-linear-gradient(289deg, #000000 0%, #000000 50%, #000000 100%);
-	background: -ms-linear-gradient(289deg, #000000 0%, #000000 50%, #000000 100%);
-	background: linear-gradient(161deg, #000000 0%, #000000 50%, #000000 100%);
-	opacity: 0.45;
-	position: absolute;
-	z-index: 0;
-	left: 0;
-	top: 325px;
-	-ms-transform-origin: 100% 0%;
-	-webkit-transform-origin: 100% 0%;
-	transform-origin: 100% 0%;
-	-webkit-animation: roll-out 1.2s ease-out;
-	-moz-animation: roll-out 1.2s ease-out;
-	animation: roll-out 1.2s ease-out;
-}
-
-.hero h1, .hero p {
-	-webkit-animation: scale-in 1.3s ease-out;
-	-moz-animation: scale-in 1.3s ease-out;
-	animation: scale-in 1.3s ease-out;
+#box {
+	background-color: #261339;
+	padding: 4px;
 }
 
 .cta2 {
@@ -194,15 +218,15 @@ strong {
 	align-items: center;
 	align-content: center;
 	position: inherit;
-	margin: auto auto;
-	margin-top: 35%;
+	margin: auto;
+	margin-top: 32%;
 	z-index: 999;
 	background-color: #BE9FDD;
 	border: 1px solid #FFD700;
 	text-align: center;
 	text-decoration: none;
-	width: 200px;
-	height: 65px;
+	width: 180px;
+	height: 60px;
 	border-radius: 6px;
 	transition: all .5s ease-in-out;
 	box-shadow: 0 7px 7px rgba(0, 0, 0, 0.25);
@@ -227,7 +251,7 @@ strong {
 	width: 100%;
 	height: 50px;
 	margin: 0 auto;
-	padding-top: 23px;
+	padding-top: 20px;
 	overflow-y: hidden;
 }
 
@@ -243,14 +267,14 @@ strong {
 	float: right;
 	display: block;
 	position: fixed;
-	top: .5%;
-	right: 2.5%;
+	top: 12px;
+	right: 6.5%;
 	background-color: #BE9FDD;
 	border: 1px solid #FFD700;
 	text-align: center;
 	text-decoration: none;
-	width: 111px;
-	height: 45px;
+	width: 100px;
+	height: 35px;
 	border-radius: 6px;
 	transform: scale(1);
 	transition: all .5s ease-in-out;
@@ -269,14 +293,14 @@ strong {
 .cta a {
 	color: #261339;
 	font-family: 'Righteous', sans-serif;
-	font-size: 1rem;
+	font-size: .8rem;
 	text-align: center;
 	text-decoration: none;
 	display: block;
 	width: 100%;
 	height: 30px;
 	margin: 0 auto;
-	padding-top: 15px;
+	padding-top: 11px;
 	overflow-y: hidden;
 }
 
@@ -286,14 +310,14 @@ strong {
 
 .litepaper {
 	font-family: 'Righteous', sans-serif;
-	font-size: 1rem;
+	font-size: .8rem;
 	margin: 0 auto;
 	z-index: 555;
 	float: right;
 	display: block;
 	position: absolute;
-	top: 36.5%;
-	right: 10%;
+	top: 38%;
+	right: 12%;
 	text-align: center;
 	text-decoration: none;
 	width: 111px;
@@ -340,7 +364,7 @@ nav {
 
 nav ul {
 	list-style: none;
-	background-color: rgba(214, 214, 214, 0.25);
+	background-color: rgba(214, 214, 214, 0.2);
 	overflow: hidden;
 	color: #ccc;
 	padding: 0;
@@ -415,14 +439,21 @@ nav ul li a:hover {
 
 .bgarea {
 	background-color: #261339;
-	width: 65%;
-	height: auto;
+	background-image: url('../img/bg.png');
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: bottom left;
+	overflow-x: hidden;
+	width: 100%;
+	height: 600px;
 	display: block;
 	margin: 0 auto;
 	border-radius: 6px;
 	box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.5);
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
 }
-
 a {
 	color: #BE9FDD;
 	text-decoration: none;
@@ -443,16 +474,17 @@ a {
 .about img {
 	float: right;
 	width: 420px;
-	margin: 0 2.5% .5% auto;
+	margin: 6% 2.5% .5% auto;
 	border-radius: 6px;
 }
 
 .about p {
 	margin: 0 auto;
-	line-height: 20px;
+	line-height: 24px;
 	float: left;
 	width: 375px;
 	font-weight: 300;
+	font-size: 1rem;
 	color: #f2e4ff;
 }
 
@@ -469,14 +501,13 @@ a {
 .card-container {
 	display: flex;
 	justify-content: center;
-	overflow: hidden;
 }
 
 .card {
-	background-color: #261339;
+	border: 1px solid #FFD700;
 	padding: 20px;
-	width: 250px;
-	height: 325px;
+	width: 290px;
+	height: 350px;
 	transition: all 0.3s;
 	margin: .5%;
 	overflow: hidden;
@@ -486,8 +517,9 @@ a {
 	position: relative;
 	z-index: 989;
 	transition: .4s all ease-in-out;
-	box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+	box-shadow:  5px 7px 7px rgba(213, 183, 238, 0.25);
 	-webkit-filter: brightness(120%);
+	transform: scale(1.02);
 }
 
 #card-1 {
@@ -512,34 +544,34 @@ a {
 }
 
 .card__img i {
-	font-size: 3rem;
+	font-size: 4rem;
 	display: block;
 	position: relative;
 	color: #FFD700;
 	margin: 0 auto;
 	text-align: center;
-	padding-bottom: 25%;
+	padding-bottom: 20%;
 	padding-top: 15%;
 }
 
 .card__heading {
 	font-family: 'Righteous', sans-serif;
-	font-size: 1.75rem;
+	font-size: 2rem;
 	text-align: center;
-	color: #e6cdff;
+	color: 	#BE9FDD;
 	margin: 0 auto;
 	overflow: hidden;
 }
 
 .card__description {
 	font-family: 'Montserrat', sans-serif;
-	font-size: .95rem;
+	font-size: 1.1rem;
 	font-weight: 300;
 	text-align: center;
-	line-height: 22px;
-	letter-spacing: 1.75px;
+	line-height: 26px;
+	letter-spacing: 1.85px;
 	margin: 0 auto;
-	padding-top: 15%;
+	padding-top: 10%;	
 	overflow: hidden;
 }
 
@@ -584,7 +616,13 @@ a {
 }
 
 .info2 {
-	overflow-y: hidden;
+	background-color: #261339;
+	background-image: url('../img/bg.png');
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: bottom left;
+	overflow-x: hidden;
 }
 
 .info2 img {
@@ -602,7 +640,8 @@ a {
 	font-weight: 300;
 	font-size: 1.75rem;
 	color: #f2e4ff;
-	padding-top: 20%;
+	padding-top: 15%;
+	padding-bottom: 15%;
 	overflow-y: hidden;
 }
 
@@ -618,74 +657,116 @@ svg {
 	margin-top: 10%;
 }
 
-.middle {
-	width: 100%;
-	text-align: center;
-	margin-bottom: 10%;
-	overflow-y: hidden;
+#contact {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	--color-bright: #BE9FDD;
+	background: transparent;
+	margin: 0 auto;
+	margin-top: -100px;
+	margin-bottom: 100px;
+	overflow: visible;
 }
-
-.btn {
-	display: inline-block;
-	width: 90px;
-	height: 90px;
-	background: #BE9FDD;
-	margin: 10px;
-	border-radius: 30%;
-	box-shadow: 0 5px 15px -5px #00000070;
-	color: #261339;
+#contact:hover {
+	cursor: crosshair;
+	overflow: visible;
+}
+#contact .links {
+	display: flex;
+	min-width: 375px;
+	min-height: 250px;
+	align-items: center;
+	justify-content: space-evenly;
 	overflow: hidden;
+}
+#contact a {
+	text-decoration: none;
+	color: var(--color-bright);
+	font-size: 3rem;
+	overflow: visible;
+}
+#contact .links a {
+	display: block;
 	position: relative;
-	border: 1.5px solid #FFD700;
+	overflow: visible;
 }
-
-.btn:hover {
-	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-}
-
-.btn i {
-	line-height: 90px;
-	font-size: 2.5rem;
-	transition: .5s linear;
-}
-
-.btn:hover i {
-	transform: scale(1.3);
-	color: #BE9FDD;
-}
-
-.btn::before {
-	content: "";
+#contact .links a::after {
+	content: '';
 	position: absolute;
-	width: 120%;
-	height: 120%;
-	background: #261339;
-	transform: rotate(45deg);
-	left: -110%;
-	top: 90%;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: 1px solid transparent;
+	transition: all .3s;
+	overflow: visible;
 }
-
-.btn:hover::before {
-	animation: aaa .8s 1;
-	top: -10%;
-	left: -10%;
+#contact .links a:hover::after {
+	transform: rotate(35deg) skew(-20deg);
+	--transformed-box-diagonal-length: 164%;
+	width: var(--transformed-box-diagonal-length);
+	left: calc( (100% - var(--transformed-box-diagonal-length)) / 2);
+	overflow: visible;
 }
-
-@keyframes aaa {
-	0% {
-		left: -110%;
-		top: 90%;
-	}
-	50% {
-		left: 10%;
-		top: -30%;
-	}
-	100% {
-		top: -10%;
-		left: -10%;
-	}
+#contact .links a div {
+	position: relative;
+	display: block;
+	width: 75px;
+	height: 75px;
+	transition: ease-in-out .3s;
+	overflow: visible;
 }
+#contact .links a:hover div {
+	transform: rotate(-35deg) skew(20deg);
+	overflow: visible;
+}
+.links a span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transition: 0.5s;
+	transition-duration: 0.5s;
+	border: 1px solid var(--color-bright);
+	border-color: var(--color-bright);
+	border-radius: 6px;
+	overflow: visible;
 
+}
+.links a span:nth-child(5) {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	border-color: var(--color-bright);
+	overflow: visible;
+}
+.links a:hover span:nth-child(5) {
+	transform: translate(20px, -20px);
+	overflow: visible;
+	opacity: 1;
+}
+.links a:hover span:nth-child(4) {
+	transform: translate(15px, -15px);
+	overflow: visible;
+	opacity: .8;
+}
+.links a:hover span:nth-child(3) {
+	transform: translate(10px, -10px);
+	overflow: visible;
+	opacity: .6;
+}
+.links a:hover span:nth-child(2) {
+	transform: translate(5px, -5px);
+	overflow: visible;
+	opacity: .4;
+}
+.links a:hover span:nth-child(1) {
+	overflow: visible;
+	opacity: .2;
+}
 /* FOOTER */
 
 footer {
@@ -718,11 +799,16 @@ a:active {
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 300;
 	margin: 0 auto;
-	height: auto;
-	padding: 1.5%;
+	height: 40px;
+	padding-top: 15px;
 	line-height: 24px;
-	display: block;
+	background-color: #261339;
+	display: inline-block;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
 	text-align: center;
+	overflow: hidden;
 }
 
 #italic {
@@ -738,7 +824,7 @@ a:active {
 	background-repeat: no-repeat;
 	background-position-x: center;
 	background-position-y: bottom;
-	margin-bottom: 5%;
+	margin-bottom: 5;
 	text-align: center;
 	font-size: 1rem;
 	padding-bottom: 5px;
@@ -793,21 +879,41 @@ a:active {
 
 /* RESPONSIVE QUERIES */
 
-@media only screen and (max-width: 1690px) {
+
+@media only screen and (max-width: 2500px) {
 	.cta2 {
-		margin-top: 40%;
+		margin-top: 60vh;
 	}
+	.hero p {
+		height: 60px;
+	}
+}
+
+@media only screen and (max-width: 1974px) {
 	#header-container {
 		height: 100vh;
+	}
+	.hero p {
+		width: 50%;
+		height: 80px;
+	}
+}
+
+@media only screen and (max-width: 1770px) {
+	.litepaper {
+		margin-right: 1.5%;
+	}
+	.hero p {
+		width: 50%;
 	}
 }
 
 @media only screen and (max-width: 1500px) {
 	.bgarea {
-		min-width: 90%;
+		width: 100%;
 	}
-	.cta2 {
-		margin-top: 45%;
+	.hero p {
+		width: 50%;
 	}
 	.litepaper {
 		margin-right: 3.5%;
@@ -816,29 +922,23 @@ a:active {
 
 @media only screen and (max-width: 1380px) {
 	.hero p {
-		width: 80%;
-	}
-	.cta2 {
-		margin-top: 50%;
+		width: 60%;
 	}
 }
 
 @media only screen and (max-width: 1200px) {
 	.bgarea {
-		min-width: 90%;
-	}
-	.cta2 {
-		margin-top: 55%;
+		width: 100%;
 	}
 	.litepaper {
 		margin-right: 5%;
 	}
+	.hero p {
+		width: 70%;
+	}
 }
 
 @media only screen and (max-width: 1100px) {
-	.cta2 {
-		margin-top: 65%;
-	}
 	nav {
 		top: 0px;
 		overflow: hidden;
@@ -858,7 +958,7 @@ a:active {
 		background: #BE9FDD;
 	}
 	nav.black ul {
-		background: #BE9FDD;
+		background: rgba(190,159,221, 0.9);
 	}
 	.showing {
 		max-height: 20em;
@@ -879,10 +979,10 @@ a:active {
 		overflow: hidden;
 	}
 	.hero p {
-		width: 85%;
+		width: 80%;
 	}
 	.bgarea {
-		min-width: 90%;
+		width: 100%;
 	}
 	.about img {
 		width: 50%;
@@ -918,15 +1018,16 @@ a:active {
 
 @media only screen and (max-width: 1024px) {
 	.bgarea {
-		width: 90%;
+		width: 100%;
 	}
 	.about p {
 		width: 55%;
 		margin: 0 auto;
+		padding-top: 10%;
 	}
 	.about img {
 		width: 45%;
-		margin: 2% auto;
+		margin: 4% auto;
 	}
 	.info p {
 		width: 55%;
@@ -947,9 +1048,6 @@ a:active {
 	.cta {
 		top: 1%;
 	}
-	.cta2 {
-		margin-top: 60%;
-	}
 	.litepaper {
 		display: none;
 	}
@@ -965,9 +1063,6 @@ a:active {
 	.cta {
 		margin-top: 2%;
 	}
-	.cta2 {
-		margin-top: 70%;
-	}
 }
 
 @media only screen and (max-width: 860px) {
@@ -975,7 +1070,9 @@ a:active {
 		font-size: 3rem;
 	}
 	.bgarea {
-		width: 90%;
+		width: 100%;
+		height: 1200px;
+		overflow: hidden;
 	}
 	.about img {
 		width: 100%;
@@ -983,7 +1080,7 @@ a:active {
 	}
 	.about p {
 		width: 100%;
-		margin: 0 auto;
+		margin: 10% auto;
 		text-align: center;
 	}
 	.info img {
@@ -1010,7 +1107,7 @@ a:active {
 		width: 90%;
 	}
 	.cta2 {
-		margin-top: 80%;
+		margin-top: 65%;
 	}
 }
 
@@ -1035,21 +1132,21 @@ a:active {
 	}
 	.hero p {
 		width: 90%;
-		overflow: hidden;
 		font-size: 1.25rem;
 	}
 	.cta {
 		top: 1%;
 	}
 	.bgarea {
-		width: 90%;
+		width: 100%;
+		height: 1200px;
 	}
 	.about img {
-		width: 90%;
+		max-width: 100%;
 	}
 	.about p {
 		width: 90%;
-		margin: 0 auto;
+		margin: 10% auto;
 		text-align: center;
 	}
 	.info img {
@@ -1069,16 +1166,13 @@ a:active {
 		text-align: center;
 	}
 	.cta2 {
-		margin-top: 80%;
+		margin-top: 70%;
 	}
 }
 
 @media only screen and (max-width: 768px) {
 	#header-container {
-		height: 80vh;
-	}
-	.cta2 {
-		margin-top: 80%;
+		height: 100vh;
 	}
 	h1 {
 		width: 100%;
@@ -1092,7 +1186,8 @@ a:active {
 		line-height: 26px;
 	}
 	.bgarea {
-		width: 90%;
+		width: 100%;
+		height: 1200px;
 	}
 	.bgarea img {
 		float: none;
@@ -1105,7 +1200,7 @@ a:active {
 		line-height: 26px;
 		min-width: 90%;
 		text-align: center;
-		padding-top: 5%;
+		padding-top: 10%;
 	}
 	.vcenter {
 		display: block;
@@ -1127,7 +1222,6 @@ a:active {
 	}
 	.info p {
 		float: none;
-		padding: 0;
 		line-height: 26px;
 		min-width: 90%;
 	}
@@ -1136,12 +1230,9 @@ a:active {
 	}
 	.info2 {
 		float: none;
-		line-height: 26px;
 	}
 	.info2 p {
 		float: none;
-		padding: 0;
-		line-height: 26px;
 		min-width: 90%;
 	}
 	.info2 img {
@@ -1156,20 +1247,22 @@ a:active {
 		background-size: cover;
 	}
 	.hero p {
+		margin-top: 420px;
 		width: 90%;
+		height: 90px;
 	}
 	.cta {
 		right: 6.5%;
 		top: 1.2%;
 	}
 	.cta2 {
-		margin-top: 80%;
+		margin-top: 75%;
 	}
 }
 
 @media only screen and (max-width:640px) {
 	.bgarea {
-		width: 90%;
+		width: 100%;
 	}
 	nav {
 		float: right;
@@ -1180,7 +1273,7 @@ a:active {
 		padding: 16px 0 20px 0;
 	}
 	.about p {
-		margin: 2.5% auto;
+		margin-top: 25%;
 		padding: 0;
 		width: 90%;
 		font-size: 1rem;
@@ -1191,9 +1284,8 @@ a:active {
 	}
 	.info p {
 		margin: 2.5% auto;
-		padding: 0;
 		width: 90%;
-		font-size: 1rem;
+		font-size: 1.3rem;
 	}
 	.info {
 		margin: 2.5% auto;
@@ -1201,9 +1293,8 @@ a:active {
 	}
 	.info2 p {
 		margin: 2.5% auto;
-		padding: 0;
 		width: 90%;
-		font-size: 1rem;
+		font-size: 1.3rem;
 	}
 	.info2 {
 		margin: 2.5% auto;
@@ -1245,7 +1336,7 @@ a:active {
 		top: 0;
 		bottom: 0;
 		width: 100%;
-		height: 70vh;
+		height: 80vh;
 		overflow: hidden;
 	}
 	.hero p {
@@ -1261,10 +1352,7 @@ a:active {
 		overflow: hidden;
 		height: 100%;
 		top: 120px;
-		font-size: 2.25rem;
-	}
-	#header-container {
-		overflow-y: hidden;
+		font-size: 5rem;
 	}
 	.bar {
 		top: 130px;
@@ -1275,13 +1363,33 @@ a:active {
 	}
 }
 @media only screen and (max-width: 550px) {
+	.hero p {
+		margin-top: 130px;
+		overflow: hidden;
+		width: 90%;
+		height: 80px;
+		font-size: .95rem;
+		line-height: 24px;;
+	}
+	.hero h1 {
+		width: 80%;
+		height: 100%;
+		font-size: 5rem;
+		line-height: 80px;
+		margin-top: 35%;
+	}
 	.cta2 {
-		margin-top: 60%;
+		top: 35%;
 	}
 }
 @media only screen and (max-width: 480px) {
 	.bgarea {
-		width: 90%;
+		width: 100%;
+		height: 1200px;
+		overflow: hidden;
+	}
+	.about p {
+		margin-top: 5%;
 	}
 	nav {
 		width: 100%;
@@ -1290,40 +1398,33 @@ a:active {
 		line-height: 50px;
 	}
 	#header-container {
-		height: 70vh;	
-	}
-	.hero {
-		background-size: cover;
+		height: 100%;
 	}
 	.hero p {
-		width: 95%;
+		margin: 0 auto;
 		overflow: hidden;
-		height: 100%;
+		height: 80px;
 		font-size: .8rem;
 	}
 	.hero h1 {
 		width: 80%;
-		overflow: hidden;
-		height: 100%;
-		top: 120px;
-		font-size: 1.75rem;
-		line-height: 24px;
-	}
-	.bar {
-		height: 50px;
+		height: auto;
+		font-size: 3.75rem;
+		line-height: 60px;
+		margin-top: 20%;
 	}
 	.cta2 {
-		top: 15%;
+		top: 300px;
+	}
+	.about p {
+		padding-top: 200px;
 	}
 }
 
 @media only screen and (max-width: 375px) {
-	#header-container {
-		height: 95vh;
-
-	}
 	.bgarea {
-		width: 90%;
+		width: 100%;
+		height: 1100px;
 	}
 	.about img {
 		float: none;
@@ -1338,8 +1439,9 @@ a:active {
 	}
 	.about p {
 		margin: 0 auto;
-		padding: 0;
-		width: 90%;
+		padding-top: 125px;
+		width: 95%;
+		text-align: left;;
 	}
 	.info {
 		margin: 0 auto;
@@ -1366,22 +1468,51 @@ a:active {
 	h1 {
 		font-size: 2.5rem;
 	}
-	.hero p {
-		width: 90%;
+	#header-container {
+		height: 100%;
+	}
+	#dots {
 		overflow: hidden;
-		margin-top: -130px;
-		font-size: .8rem;
+	}
+	.hero p {
+		margin-top: 0;
+		overflow: hidden;
+		height: 80px;
+		font-size: .9rem;
 	}
 	.hero h1 {
 		width: 80%;
-		overflow: hidden;
-		top: 170px;
-		font-size: 1.25rem;
-	}
-	.bar {
-		height: 50px;
+		height: 100%;
+		font-size: 3.5rem;
+		line-height: 60px;
+		margin-top: 80px;
 	}
 	.cta2 {
-		top: 40%;
+		top: 320px;
+	}
+	.cta {
+		margin-top: 2.5%;
+	}
+}
+@media only screen and (max-width: 320px) {
+	.hero p {
+		margin-top: -100px;
+		padding: 0;
+		overflow: hidden;
+		height: 80px;
+		font-size: .9rem;
+	}
+	.hero h1 {
+		width: 80%;
+		height: 100%;
+		font-size: 2.5rem;
+		line-height: 45px;
+		margin-top: 30px;
+	}
+	.cta2 {
+		top: 250px;
+	}
+	.cta {
+		display: none;
 	}
 }

@@ -1,3 +1,4 @@
+
 //Menu toggle-button for small screens
 $(document).ready(function (){
   $(".menu-icon").on("click", function() {
