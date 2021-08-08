@@ -132,6 +132,8 @@ strong {
 	box-shadow: inset 7px 10px 12px 0px #261339;
 	}
 
+
+
 /* HERO */
 
 #dots {
@@ -471,10 +473,10 @@ a {
 	overflow-y: hidden;
 }
 
-.about img {
+.about object {
 	float: right;
-	width: 420px;
-	margin: 6% 2.5% .5% auto;
+	width: 530px;
+	margin: 5% 0 0 auto;
 	border-radius: 6px;
 }
 
@@ -984,12 +986,12 @@ a:active {
 	.bgarea {
 		width: 100%;
 	}
-	.about img {
+	.about object {
 		width: 50%;
-		margin: 0 auto;
+		margin: 5% auto;
 	}
 	.about p {
-		width: 45%;
+		width: 50%;
 		margin: 0 auto;
 	}
 	.info img {
@@ -1021,13 +1023,13 @@ a:active {
 		width: 100%;
 	}
 	.about p {
-		width: 55%;
+		width: 50%;
 		margin: 0 auto;
 		padding-top: 10%;
 	}
-	.about img {
-		width: 45%;
-		margin: 4% auto;
+	.about object {
+		width: 50%;
+		margin-top: 7.5%;
 	}
 	.info p {
 		width: 55%;
@@ -1071,12 +1073,12 @@ a:active {
 	}
 	.bgarea {
 		width: 100%;
-		height: 1200px;
+		height: 1300px;
 		overflow: hidden;
 	}
-	.about img {
+	.about object {
 		width: 100%;
-		margin-bottom: 5%;
+		margin-bottom: 10%;
 	}
 	.about p {
 		width: 100%;
@@ -1141,8 +1143,9 @@ a:active {
 		width: 100%;
 		height: 1200px;
 	}
-	.about img {
-		max-width: 100%;
+	.about object {
+		width: 100%;
+		margin-right: 5%;
 	}
 	.about p {
 		width: 90%;
@@ -1213,8 +1216,9 @@ a:active {
 	.about, #feat, #soc {
 		margin-top: 100px;
 	}
-	.about img {
-		min-width: 85%;
+	.about object {
+		width: 100%;
+		margin: auto;
 	}
 	.info {
 		float: none;
@@ -1281,6 +1285,9 @@ a:active {
 	.about {
 		margin: 2.5% auto;
 		padding: 0;
+	}
+	.about object {
+		width: 100%;
 	}
 	.info p {
 		margin: 2.5% auto;
@@ -1381,6 +1388,9 @@ a:active {
 	.cta2 {
 		top: 35%;
 	}
+	.about object {
+		width: 100%;
+	}
 }
 @media only screen and (max-width: 480px) {
 	.bgarea {
@@ -1390,6 +1400,11 @@ a:active {
 	}
 	.about p {
 		margin-top: 5%;
+		padding-top: 200px;
+	}
+	.about object {
+		width: 100%;
+		margin: auto;
 	}
 	nav {
 		width: 100%;
@@ -1416,9 +1431,6 @@ a:active {
 	.cta2 {
 		top: 300px;
 	}
-	.about p {
-		padding-top: 200px;
-	}
 }
 
 @media only screen and (max-width: 375px) {
@@ -1426,12 +1438,8 @@ a:active {
 		width: 100%;
 		height: 1100px;
 	}
-	.about img {
-		float: none;
-		width: 90%;
-		margin: 0 auto;
-		padding: 0;
-		overflow-x: hidden;
+	.about object {
+		width: 100%;
 	}
 	.about {
 		margin: 0 auto;
