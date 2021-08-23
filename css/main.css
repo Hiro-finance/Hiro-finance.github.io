@@ -213,16 +213,12 @@ transition: 0s linear;
 	padding: 4px;
 }
 
-.cta2 {
+.dropdown {
+	position: relative;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	align-content: center;
-	position: inherit;
 	margin: auto;
 	margin-top: 32%;
-	z-index: 999;
+	z-index: 900;
 	background-color: #BE9FDD;
 	border: 1px solid #FFD700;
 	text-align: center;
@@ -230,36 +226,65 @@ transition: 0s linear;
 	width: 180px;
 	height: 60px;
 	border-radius: 6px;
-	transition: all .5s ease-in-out;
+	transition: all .4s ease-in-out;
 	box-shadow: 0 7px 7px rgba(0, 0, 0, 0.25);
-	overflow-y: hidden;
+	overflow: hidden;
 }
 
-.cta2:hover {
-	transform: scale(1.01);
-	transition: all .3s ease-in-out;
-	box-shadow: 0 7px 7px rgba(0, 0, 0, 0.5);
-	background-color: #261339;
-	border: 1.5px solid #FFD700;
-}
-
-.cta2 a {
+.dropdown a {
 	color: #261339;
 	font-family: 'Righteous', sans-serif;
-	font-size: 1.35rem;
+	font-size: 1.25rem;
 	text-align: center;
 	text-decoration: none;
+	width: 180px;
 	display: block;
-	width: 100%;
-	height: 50px;
 	margin: 0 auto;
 	padding-top: 20px;
-	overflow-y: hidden;
+	overflow: hidden;
+	z-index: -1;
 }
+  
+  .dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #261339;
+	width: 180px;
+	z-index: 1;
+	margin: 0 auto;
+	text-align: center;
+	height: 200px;
+  }
 
-.cta2 a:hover {
+  .dropdown-content a {
 	color: #BE9FDD;
-}
+	top: -15px;
+  } 
+
+  .dropdown:hover .dropdown-content {
+	display: block;
+	z-index: 990;
+  }
+
+  .dropdown:hover {
+	  height: 100px;
+	  transition: all .3s ease-in-out;
+	  transform: scale(1.01);
+	  transition: all .5s ease-in-out;
+	  box-shadow: 0 7px 7px rgba(0, 0, 0, 0.5);
+	  background-color: #261339;
+	  border: 1.5px solid #FFD700;
+  }
+
+  .dropdown-content:hover {
+	background-color: #261339;
+  }
+
+  .dropdown-content a:hover {
+	  transform: scale(1.02);
+	  transition: all .3s ease-in-out;
+	  text-decoration: underline;
+  }
 
 /*BUTTON*/
 
@@ -519,9 +544,7 @@ a {
 	position: relative;
 	z-index: 989;
 	transition: .4s all ease-in-out;
-	box-shadow:  5px 7px 7px rgba(213, 183, 238, 0.25);
-	-webkit-filter: brightness(120%);
-	transform: scale(1.02);
+	box-shadow:  1px 1px 5px 3px rgba(255, 217, 0, 0.507);
 }
 
 #card-1 {
@@ -625,6 +648,7 @@ a {
 	background-size: cover;
 	background-position: bottom left;
 	overflow-x: hidden;
+	margin: 5% auto;
 }
 
 .info2 img {
@@ -829,7 +853,7 @@ a:active {
 	margin-bottom: 5;
 	text-align: center;
 	font-size: 1rem;
-	padding-bottom: 5px;
+	padding-bottom: 150px;
 }
 
 .ftrbg a {
@@ -883,7 +907,7 @@ a:active {
 
 
 @media only screen and (max-width: 2500px) {
-	.cta2 {
+	.dropdown {
 		margin-top: 60vh;
 	}
 	.hero p {
@@ -1108,7 +1132,7 @@ a:active {
 	.hero p {
 		width: 90%;
 	}
-	.cta2 {
+	.dropdown {
 		margin-top: 65%;
 	}
 }
@@ -1132,9 +1156,13 @@ a:active {
 	.card {
 		margin: 1.5%;
 	}
+	.hero h1 {
+		top: 200px;
+	}
 	.hero p {
 		width: 90%;
-		font-size: 1.25rem;
+		font-size: 1.15rem;
+		top: 400px;
 	}
 	.cta {
 		top: 1%;
@@ -1168,8 +1196,8 @@ a:active {
 		margin: 0 auto;
 		text-align: center;
 	}
-	.cta2 {
-		margin-top: 70%;
+	.dropdown {
+		margin-top: 350px;
 	}
 }
 
@@ -1250,8 +1278,12 @@ a:active {
 	.hero {
 		background-size: cover;
 	}
+	.hero h1 {
+		margin-top: 120px;
+		line-height: 70px;
+	}
 	.hero p {
-		margin-top: 420px;
+		margin-top: 50px;
 		width: 90%;
 		height: 90px;
 	}
@@ -1259,8 +1291,8 @@ a:active {
 		right: 6.5%;
 		top: 1.2%;
 	}
-	.cta2 {
-		margin-top: 75%;
+	.dropdown {
+		top: 220px;
 	}
 }
 
@@ -1365,13 +1397,13 @@ a:active {
 		top: 130px;
 		height: 140px;
 	}
-	.cta2 {
+	.dropdown {
 		margin-top: 50%;
 	}
 }
 @media only screen and (max-width: 550px) {
 	.hero p {
-		margin-top: 130px;
+		margin-top: 75px;
 		overflow: hidden;
 		width: 90%;
 		height: 80px;
@@ -1379,13 +1411,13 @@ a:active {
 		line-height: 24px;;
 	}
 	.hero h1 {
-		width: 80%;
+		width: 90%;
 		height: 100%;
 		font-size: 5rem;
 		line-height: 80px;
-		margin-top: 35%;
+		margin-top: 25%;
 	}
-	.cta2 {
+	.dropdown {
 		top: 35%;
 	}
 	.about object {
@@ -1428,7 +1460,7 @@ a:active {
 		line-height: 60px;
 		margin-top: 20%;
 	}
-	.cta2 {
+	.dropdown {
 		top: 300px;
 	}
 }
@@ -1495,7 +1527,7 @@ a:active {
 		line-height: 60px;
 		margin-top: 80px;
 	}
-	.cta2 {
+	.dropdown {
 		top: 320px;
 	}
 	.cta {
@@ -1517,7 +1549,7 @@ a:active {
 		line-height: 45px;
 		margin-top: 30px;
 	}
-	.cta2 {
+	.dropdown {
 		top: 250px;
 	}
 	.cta {
